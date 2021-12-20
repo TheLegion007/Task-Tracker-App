@@ -1,0 +1,10 @@
+  git init
+  git status
+  git add .
+  git commit -m ""
+  $ git remote add origin https://github.com/TheLegion007/intro.git
+  git branch -M main
+  git push u -origin main
+  git log --oneliness
+  git reset --hard 7cdedb
+  till day -19 done
