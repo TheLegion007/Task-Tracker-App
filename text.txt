@@ -7,7 +7,7 @@
   git push u -origin main
   git log --oneliness    press :q to exit screen
   git reset --hard 7cdedb
-  till day -20 done
+  till day -22  26:47 done
 
   ➕ :heavy_plus_sign: when adding a file or implementing a feature
   🔨 :hammer: when fixing a bug or issue
@@ -21,7 +21,7 @@
   ❌ :x: when removing code or files
   🎨 :art: visual / UI design add
 
-
+https://images.pexels.com/photos/599708/pexels-photo-599708.jpeg?cs=srgb&dl=pexels-sunil-patel-599708.jpg&fm=jpg
   bootstrap -
     - padding (pt-1 pb-2 )
     - margin (mt-2 mt-5)
@@ -37,3 +37,9 @@ script--
   - Date.now() function  (a javascript function to grab a unique id which is date and time )
   -dynamic values to keep inside backtick i.e ``
   - onclick() to trigger the function -- index.html
+  - document.getElementsByClassName(".className");
+  or
+  - document.querySelector(".className");
+  - putting html template in javascript to dyanimically render it(to add new card by javascript).
+  - {taskData.id} to grab that id.
+  - push this child into parent i.e into taskContainer
