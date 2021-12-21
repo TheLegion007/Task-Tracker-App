@@ -19,4 +19,17 @@
   ✅ :white_check_mark: when a new release was built
   👕 :shirt: when refactoring or removing linter warnings
   ❌ :x: when removing code or files
-      :art: visual / UI design add
+  🎨 :art: visual / UI design add
+
+
+  bootstrap -
+    - padding (pt-1 pb-2 )
+    - margin (mt-2 mt-5)
+    - color / bold /text
+    - navbar
+    - buttons / icons
+    - container
+    - grid (col-6 col-md-4)
+    - card (d-flex justify content)
+    - modal
+    - forms
