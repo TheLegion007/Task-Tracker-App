@@ -2,13 +2,50 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <!-- CSS only -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <title>Dom</title>
     <link rel="stylesheet" href="style.css">
   </head>
+
   <body>
+    <!-- Modal -->
+    <div class="modal fade" id="NewTask" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <!--input form starts --->
+            <div class="mb-3">
+              <label for="imageURL" class="form-label">Image URL</label>
+              <input type="url" class="form-control" id="imageURL"  placeholder="https://example.com//abc.jpg">
+            </div>
+            <div class="mb-3">
+              <label for="taskTitle" class="form-label">Task Title</label>
+              <input type="text" class="form-control" id="taskTitle" placeholder="Enter Task Title" >
+            </div>
+            <div class="mb-3">
+              <label for="taskType" class="form-label">Task Type</label>
+              <input type="text" class="form-control" id="taskType" placeholder="Enter Task Type" >
+            </div>
+            <div class="mb-3">
+              <label for="taskDescription" class="form-label">Task Description</label>
+              <textarea name="name" rows="5" type="text" class="form-control" id="taskDescription" placeholder="Enter Task Description"> </textarea>
+            </div>
+
+          </div>
+          <!------form ends-------->
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!---- modal ends  --->
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
       <div class="container-fluid">
         <a class="navbar-brand font-weight-bold text-primary" href="#">Tasky</a>
@@ -23,7 +60,8 @@
             </li>
           </ul>
         </div>
-        <button type="button" class="btn btn-primary"><i class="fas fa-plus"></i> Add New</button>
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#NewTask"><i class="fas fa-plus"></i> Add New</button>
       </div>
     </nav>
 
@@ -59,6 +97,6 @@
         </div>
       </div>
     </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
   </body>
 </html>
