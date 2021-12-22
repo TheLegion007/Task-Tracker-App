@@ -36,5 +36,5 @@ const saveChanges = () => {
 
   globalStore.push(taskData);
 
-  localStorage.setItem("tasky",JSON.stringfy({cards: globalStore}));  // tasky is an id for localStorage
+  localStorage.setItem("tasky",JSON.stringfy({cards: globalStore}));  // tasky is an id for localStorage, changing array into key value pairs //
 };
