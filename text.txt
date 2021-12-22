@@ -43,5 +43,7 @@ script--
   - putting html template in javascript to dyanimically render it(to add new card by javascript).
   - {taskData.id} to grab that id.
   - push this child into parent i.e into taskContainer
-  - local storage / API-5mb(letting the data prevail even after refreshing)
+  - local storage(Dom Storage-storing data on browser) / API-5mb(letting the data prevail even after refreshing)
   - global array and then setItem
+  - stringify accepts only object , so changinng array into key value pairs and then parse it.
+  -
