@@ -2,6 +2,8 @@
 const taskContainer = document.querySelector(".task_Container");
 console.log(taskContainer);
 
+const globalStore = []; //local  storage
+
 const saveChanges = () => {
    // get task data
   const taskData = {
@@ -32,4 +34,7 @@ const saveChanges = () => {
   // insertAdjacentHTML is a inbuilt method
   taskContainer.insertAdjacentHTML("beforeend", newCard);
 
+  globalStore.push(taskData);
+
+  localStorage.setItem("tasky",globalStore);  // tasky is an id for localStorage
 };
