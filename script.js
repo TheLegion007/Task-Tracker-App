@@ -4,18 +4,8 @@ console.log(taskContainer);
 
 const globalStore = []; //local  storage
 
-const saveChanges = () => {
-   // get task data
-  const taskData = {
-    id: `${Date.now()}`,
-    imageurl: document.getElementById("imageURL").value,
-    tasktitle: document.getElementById("taskTitle").value,
-    tasktype: document.getElementById("taskType").value,
-    taskdescription: document.getElementById("taskDescription").value
-  };
-  //console.log(taskData);
-  //onclick() in .html file to trigger this function//
-  const newCard = `
+const generateHTML = (taskData) => {
+  return `
   <div id= {taskData.id} class="col-md-6 col-lg-4">
     <div class="card">
       <div class="card-header d-flex justify-content-end gap-2">
@@ -31,10 +21,36 @@ const saveChanges = () => {
     </div>
   </div>
   `;
+};
+const saveChanges = () => {
+   // get task data
+  const taskData = {
+    id: `${Date.now()}`,
+    imageurl: document.getElementById("imageURL").value,
+    tasktitle: document.getElementById("taskTitle").value,
+    tasktype: document.getElementById("taskType").value,
+    taskdescription: document.getElementById("taskDescription").value
+  };
+  //console.log(taskData);
+  //onclick() in .html file to trigger this function//
   // insertAdjacentHTML is a inbuilt method
-  taskContainer.insertAdjacentHTML("beforeend", newCard);
+  taskContainer.insertAdjacentHTML("beforeend", generateHTML(taskData));
 
   globalStore.push(taskData);
 
   localStorage.setItem("tasky",JSON.stringfy({cards: globalStore}));  // tasky is an id for localStorage, changing array into key value pairs //
+};
+
+const loadInitialData = () => {
+  // localStorage to get tasky card Data, localStorage/setItem store data  in form of string //
+  const getCardData = localStorage.getItem("tasky");
+  // convert the string to a normal object/array of object
+  const {cards} = JSON.parse(getCardData);
+  //loop over the array of task object to create HTML cards, inject it to our DOM//
+  cards.map((cardObject)=> {
+    taskContainer.insertAdjacentHTML("beforeend",generateHTML(cardObject));
+
+    // update our global Store//
+    globalStore.push(cardObject);
+  })
 };
