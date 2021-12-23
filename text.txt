@@ -7,7 +7,7 @@
   git push u -origin main
   git log --oneliness    press :q to exit screen
   git reset --hard 7cdedb
-  till day -22  26:47 done
+  till day -22  33:10 done
 
   ➕ :heavy_plus_sign: when adding a file or implementing a feature
   🔨 :hammer: when fixing a bug or issue
@@ -45,5 +45,15 @@ script--
   - push this child into parent i.e into taskContainer
   - local storage(Dom Storage-storing data on browser) / API-5mb(letting the data prevail even after refreshing)
   - global array and then setItem
-  - stringify accepts only object , so changinng array into key value pairs and then parse it.
+  - stringify accepts only object , so changing array into key value pairs and then parse it.
   -
+  -destructured concept of javascript i.e.  const {cards}
+  - create func to store data by helping localStorage by creating array
+  - globalStore - [] pushing value of card1 card2 card3...(cards are object)
+  - localstorage(string) ----->Refresh------->globaldata(array of object)
+  - cycle --
+    -feeding in card(data) then ---globalstorage array pushes to localStorage
+    - now when refereshing anything , and globalstorage is empty
+    - then localStorage pushes data to globalstorage and it render it on screen.
+
+  - onload event listener in html file
